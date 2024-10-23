@@ -1,6 +1,7 @@
 import express from "express";
 import movieRoute from "./routes/movies.router.js"
 import connectDB from "./server/db.js";
+import cors from "cors";
 
 const app = express();
 const PORT = 6000;
@@ -8,6 +9,7 @@ const PORT = 6000;
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+app.use(cors());
 connectDB();
 
 app.get("/", (req, res) => {
