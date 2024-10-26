@@ -59,7 +59,7 @@ const newMovie = new Movie({
     title: req.body.title,
     desc: req.body.desc,
     publish: req.body.publish,
-    author: req.body.Author
+    author: req.body.author
 });
 
 
