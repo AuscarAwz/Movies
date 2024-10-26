@@ -46,9 +46,9 @@ export const movieIndexById = async (req, res) => {
 //C = for POST Creating
 export const movieCreate = async  (req, res) => { 
     
-    const {title, desc, publish, Author} = req.body;
+    const {title, desc, publish, author} = req.body;
     
-    if(!title || !desc || !Author){
+    if(!title || !desc || !author){
         return res.status(400).json({message:"Missing required fields"});
     }
 
@@ -59,7 +59,7 @@ const newMovie = new Movie({
     title: req.body.title,
     desc: req.body.desc,
     publish: req.body.publish,
-    Author: req.body.Author
+    author: req.body.Author
 });
 
 
