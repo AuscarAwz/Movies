@@ -1,4 +1,5 @@
 import Movie from "../model/movie.model.js";
+import Tech from "../model/tech.model.js";
 
 //R - for GET Reading
 export const movieIndex = async (req, res) => { 
@@ -27,6 +28,20 @@ export const movieIndexById = async (req, res) => {
     return res.status(400).json({message: error.message});
 }
 };
+
+// export const technologyCreate = async (req, res) => {
+//     try {
+//     const newTech = new Tech({
+//         name: 'John Doe',
+//         email: 'johndoe@example.com',
+//         password: 'securepassword',
+//       });
+      
+//       newTech.save()
+//     } catch (error) {
+//         return res.status(400).json({message: error.message});
+//     }
+// }
 
 //C = for POST Creating
 export const movieCreate = async  (req, res) => { 
