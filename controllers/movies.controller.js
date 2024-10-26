@@ -31,9 +31,9 @@ export const movieIndexById = async (req, res) => {
 //C = for POST Creating
 export const movieCreate = async  (req, res) => { 
     
-    const {title, desc, publish, Actor} = req.body;
+    const {title, desc, publish, Author} = req.body;
     
-    if(!title || !desc || !Actor){
+    if(!title || !desc || !Author){
         return res.status(400).json({message:"Missing required fields"});
     }
 
@@ -44,7 +44,7 @@ const newMovie = new Movie({
     title: req.body.title,
     desc: req.body.desc,
     publish: req.body.publish,
-    Actor: req.body.Actor
+    Author: req.body.Author
 });
 
 
@@ -68,7 +68,7 @@ export const movieUpdate = async (req, res) => {
             return res.status(404).json({message: "Movie not found"});
         }
 
-        const {title, desc, publish, Actor} = req.body;
+        const {title, desc, publish, Author} = req.body;
 
         if(title) {
             MovieUpdateId.title = title;
@@ -79,8 +79,8 @@ export const movieUpdate = async (req, res) => {
         if(publish) {
             MovieUpdateId.publish = publish;
         }
-        if(Actor) {
-            MovieUpdateId.Actor = Actor;
+        if(Author) {
+            MovieUpdateId.Author = Author;
         }
         console.log(MovieUpdateId)
         const updateMovieResult =await MovieUpdateId.save();
@@ -123,7 +123,7 @@ export const movieDelete = async (req, res) => {
         return res.status(200).json({message: "Delete a movie",Name: MovieDeleteById.title,
             desc: MovieDeleteById.desc, 
             publish: MovieDeleteById.publish, 
-            Actor: MovieDeleteById.Actor}); 
+            Author: MovieDeleteById.Author}); 
         
     } catch (error) {
         return res.status(400).json({message: error.message});
