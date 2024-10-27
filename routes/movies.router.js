@@ -10,6 +10,7 @@ router.get('/', movieIndex);
 
 router.get('/:id', movieIndexById);
 
+
 //C = for POST Creating
 //router.post('/', (req, res) => { res.status(200).json({message: "Create a movie"}) })
 router.post('/', movieCreate);
