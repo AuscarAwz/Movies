@@ -21,7 +21,7 @@ export const technologyDetailsCreate = async (req, res) => {
                 requiredFields: ["techTitle", "techAuthor", "techIndustry"]});
         }
 
-        const newTechCreate = new TechCreate({
+        const newTechCreate = new Tech({
             
             techTitle: req.body.techTitle,
             techDesc: req.body.techDesc,
