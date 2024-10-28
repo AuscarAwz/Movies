@@ -1,5 +1,5 @@
 import express from "express";
-import { technologyDetailsCreate, technologyDetailsRecords } from "../controllers/movies.controller.js";
+import { technologyDetailsCreate, technologyDetailsRecords } from "../controllers/techs.controller.js";
 
 const techrouter = express.Router();
 
