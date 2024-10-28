@@ -1,12 +1,13 @@
 import express from "express";
-import { technologyDetailsRecords } from "../controllers/techs.controller.js";
+import { technologyDetailsRecords, technologyDetailsCreate } from "../controllers/techs.controller.js";
 
 const techrouter = express.Router();
 
-//C = for POST Creating - Technology
-//techrouter.post('/', technologyDetailsCreate);
 
 //R = For POST Creating from - Technology
 techrouter.get('/', technologyDetailsRecords);
+
+//C = for POST Creating - Technology
+techrouter.post('/', technologyDetailsCreate);
 
 export default techrouter;
