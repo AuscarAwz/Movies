@@ -14,7 +14,7 @@ export const technologyDetailsRecords = async (req, res) => {
 //C = For POST Creating from - Technology
 export const technologyDetailsCreate = async (req, res) => {
     try {
-        const { _id, techTitle, techDesc, techAuthor, techPublish, techIndustry } = req.body;
+        const { techTitle, techDesc, techAuthor, techPublish, techIndustry } = req.body;
         
         if(!techTitle || !techAuthor || !techIndustry) {
             return res.status(400).json({message: "Missing required fields like this",
@@ -22,7 +22,6 @@ export const technologyDetailsCreate = async (req, res) => {
         }
 
         const newTech = new Tech({
-            _id: req.body._id,
             techTitle: req.body.techTitle,
             techDesc: req.body.techDesc,
             techAuthor: req.body.techAuthor,
