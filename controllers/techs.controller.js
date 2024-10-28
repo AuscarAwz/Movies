@@ -22,6 +22,7 @@ export const technologyDetailsCreate = async (req, res) => {
         }
 
         const newTech = new Tech({
+            
             techTitle: req.body.techTitle,
             techDesc: req.body.techDesc,
             techAuthor: req.body.techAuthor,
