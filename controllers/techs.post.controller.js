@@ -22,7 +22,7 @@ export const technologyDetailsCreate = async (req, res) => {
         
         newTechPost.save();
         
-        return res.status(201).json(newTech);
+        return res.status(201).json(newTechPost);
     } catch (error) {
         return res.status(400).json({message: error.message});
     }
