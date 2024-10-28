@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
 const technologySchema = mongoose.Schema({
-    _id: String,
     techTitle: String,
     techDesc: String,
     techAuthor: String,
