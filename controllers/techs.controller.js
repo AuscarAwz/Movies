@@ -12,28 +12,28 @@ export const technologyDetailsRecords = async (req, res) => {
 };
 
 //C = For POST Creating from - Technology
-export const technologyDetailsCreate = async (req, res) => {
-    try {
-        const { techTitle, techDesc, techAuthor, techPublish, techIndustry } = req.body;
+// export const technologyDetailsCreate = async (req, res) => {
+//     try {
+//         const { techTitle, techDesc, techAuthor, techPublish, techIndustry } = req.body;
         
-        if(!techTitle || !techAuthor || !techIndustry) {
-            return res.status(400).json({message: "Missing required fields like this",
-                requiredFields: ["techTitle", "techAuthor", "techIndustry"]});
-        }
+//         if(!techTitle || !techAuthor || !techIndustry) {
+//             return res.status(400).json({message: "Missing required fields like this",
+//                 requiredFields: ["techTitle", "techAuthor", "techIndustry"]});
+//         }
 
-        const newTech = new Tech({
+//         const newTech = new Tech({
             
-            techTitle: req.body.techTitle,
-            techDesc: req.body.techDesc,
-            techAuthor: req.body.techAuthor,
-            techPublish: req.body.techPublish,
-            techIndustry: req.body.techIndustry
-        });
+//             techTitle: req.body.techTitle,
+//             techDesc: req.body.techDesc,
+//             techAuthor: req.body.techAuthor,
+//             techPublish: req.body.techPublish,
+//             techIndustry: req.body.techIndustry
+//         });
         
-        newTech.save();
+//         newTech.save();
         
-        return res.status(201).json(newTech);
-    } catch (error) {
-        return res.status(400).json({message: error.message});
-    }
-}
+//         return res.status(201).json(newTech);
+//     } catch (error) {
+//         return res.status(400).json({message: error.message});
+//     }
+// }

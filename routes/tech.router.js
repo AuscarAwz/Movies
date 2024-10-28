@@ -7,6 +7,6 @@ const techrouter = express.Router();
 techrouter.post('/', technologyDetailsCreate);
 
 //R = For POST Creating from - Technology
-techrouter.get('/', technologyDetailsRecords);
+//techrouter.get('/', technologyDetailsRecords);
 
 export default techrouter;
