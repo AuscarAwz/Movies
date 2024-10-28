@@ -4,9 +4,9 @@ import { technologyDetailsCreate, technologyDetailsRecords } from "../controller
 const techrouter = express.Router();
 
 //C = for POST Creating - Technology
-techrouter.post('/', technologyDetailsCreate);
+//techrouter.post('/', technologyDetailsCreate);
 
 //R = For POST Creating from - Technology
-//techrouter.get('/', technologyDetailsRecords);
+techrouter.get('/', technologyDetailsRecords);
 
 export default techrouter;
