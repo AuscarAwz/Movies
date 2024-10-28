@@ -3,6 +3,7 @@ import movieRoute from "./routes/movies.router.js"
 import techRoute from "./routes/tech.router.js";
 import connectDB from "./server/db.js";
 import cors from "cors";
+import techrouterpost from "./routes/tech.post.router.js";
 
 const app = express();
 const PORT = 6000;
@@ -20,5 +21,6 @@ app.get("/", (req, res) => {
 //Middleware
 app.use('/movies', movieRoute);
 app.use('/techs', techRoute);
+app.use('/techs', techrouterpost);
 
 app.listen("6000",() => {console.log(`Server is running on this port http://localhost:${PORT}`)});
